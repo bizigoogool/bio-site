@@ -4,18 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bizigoogool</title>
-  <link rel="icon" href="https://i.imgur.com/R0QUli8.webp" type="image/webp">
+  <link rel="icon" href="https://i.imgur.com/R0QUli8.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Vazirmatn&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
+      font-family: 'Orbitron', 'Vazirmatn', sans-serif;
       background-color: #0d0d0d;
       color: #ff0000;
-      font-family: 'Orbitron', 'Vazirmatn', sans-serif;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .background-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .background-layer::before,
+    .background-layer::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.08;
+    }
+    .background-layer::before {
+      top: 0;
+      left: 0;
+      background-image: url('https://i.imgur.com/e1DToQb.jpeg');
+    }
+    .background-layer::after {
+      bottom: 0;
+      right: 0;
+      background-image: url('https://i.imgur.com/L7PtdcU.jpeg');
+    }
+    .background-extra-1 {
+      position: fixed;
+      top: 30%;
+      left: 10%;
+      width: 30%;
+      height: 40%;
+      background-image: url('https://i.imgur.com/A9ebdTr.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .background-extra-2 {
+      position: fixed;
+      bottom: 10%;
+      right: 15%;
+      width: 30%;
+      height: 40%;
+      background-image: url('https://i.imgur.com/fEGa7uH.jpeg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.06;
+      z-index: 0;
+      pointer-events: none;
     }
     .container {
+      position: relative;
+      z-index: 1;
       padding: 50px 20px;
       animation: fadeIn 1.5s ease-in;
     }
@@ -65,8 +127,10 @@
     }
   </style>
 </head>
-  <link rel="icon" href="https://i.imgur.com/R0QUli8.png" type="image/png">
 <body>
+  <div class="background-layer"></div>
+  <div class="background-extra-1"></div>
+  <div class="background-extra-2"></div>
   <div class="container">
     <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
     <div class="name">Bizigoogool</div>
@@ -76,4 +140,3 @@
   </div>
 </body>
 </html>
-
