@@ -17,57 +17,10 @@
       position: relative;
       overflow: hidden;
     }
-    .background-layer {
+    .background-image {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .background-layer::before,
-    .background-layer::after {
-      content: "";
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.08;
-    }
-    .background-layer::before {
-      top: 0;
-      left: 0;
-      background-image: url('https://i.imgur.com/e1DToQb.jpeg');
-    }
-    .background-layer::after {
-      bottom: 0;
-      right: 0;
-      background-image: url('https://i.imgur.com/L7PtdcU.jpeg');
-    }
-    .background-extra-1 {
-      position: fixed;
-      top: 30%;
-      left: 10%;
-      width: 30%;
+      width: 40%;
       height: 40%;
-      background-image: url('https://i.imgur.com/A9ebdTr.jpeg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.06;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .background-extra-2 {
-      position: fixed;
-      bottom: 10%;
-      right: 15%;
-      width: 30%;
-      height: 40%;
-      background-image: url('https://i.imgur.com/fEGa7uH.jpeg');
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -128,9 +81,11 @@
   </style>
 </head>
 <body>
-  <div class="background-layer"></div>
-  <div class="background-extra-1"></div>
-  <div class="background-extra-2"></div>
+  <div class="background-image" style="background-image: url('https://i.imgur.com/e1DToQb.jpeg'); top: 0; left: 0;"></div>
+  <div class="background-image" style="background-image: url('https://i.imgur.com/L7PtdcU.jpeg'); bottom: 0; right: 0;"></div>
+  <div class="background-image" style="background-image: url('https://i.imgur.com/A9ebdTr.jpeg'); top: 30%; left: 10%;"></div>
+  <div class="background-image" style="background-image: url('https://i.imgur.com/fEGa7uH.jpeg'); bottom: 10%; right: 15%;"></div>
+
   <div class="container">
     <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
     <div class="name">Bizigoogool</div>
