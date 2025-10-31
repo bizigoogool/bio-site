@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bizigoogool</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Vazirmatn&display=swap" rel="stylesheet">
   <style>
@@ -16,6 +16,11 @@
     }
     .container {
       padding: 50px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .profile-img {
       width: 150px;
@@ -24,6 +29,13 @@
       background-color: #333;
       margin: 20px auto;
       box-shadow: 0 0 15px #ff0000;
+      object-fit: cover;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #ff0000; }
+      50% { box-shadow: 0 0 25px #ff0000; }
+      100% { box-shadow: 0 0 10px #ff0000; }
     }
     .name {
       font-size: 32px;
@@ -37,27 +49,28 @@
     }
     .link-btn {
       display: inline-block;
+      margin: 10px;
       padding: 12px 24px;
       background-color: #ff0000;
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s;
     }
     .link-btn:hover {
       background-color: #cc0000;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img class="profile-img" src="src="https://i.imgur.com/R0QUli8.webp"" alt="Profile Photo">
+    <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
     <div class="name">Bizigoogool</div>
     <div class="bio">Welcome to my personal page!</div>
-    <a class="link-btn" href="https://x.com/bizigoogool" target="_blank">Follow me on Twitter</a>
+    <a class="link-btn" href="https://x.com/bizigoogool" target="_blank">Twitter</a>
+    <a class="link-btn" href="https://objkt.com/users/tz1YndWpU7m4tN7nTo2L3RZDztmfdqZnTeUg" target="_blank">Objkt</a>
   </div>
 </body>
-
 </html>
-
