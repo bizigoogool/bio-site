@@ -66,9 +66,11 @@
       color: #ccc;
     }
     .link-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       margin: 10px;
-      padding: 12px 24px;
+      padding: 12px 20px;
       background-color: #ff0000;
       color: #fff;
       text-decoration: none;
@@ -80,6 +82,11 @@
       background-color: #cc0000;
       transform: scale(1.05);
     }
+    .link-btn img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -88,8 +95,11 @@
     <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
     <div class="name">Bizigoogool</div>
     <div class="bio">Welcome to my personal page!</div>
-    <a class="link-btn" href="https://x.com/bizigoogool" target="_blank">Twitter</a>
-    <a class="link-btn" href="https://objkt.com/users/tz1YndWpU7m4tN7nTo2L3RZDztmfdqZnTeUg" target="_blank">Objkt</a>
-  </div>
-</body>
-</html>
+
+    <a class="link-btn" href="https://x.com/bizigoogool" target="_blank">
+      <img src="https://copilot.microsoft.com/th/id/BCO.c22effa9-f53d-4e70-99e4-1fc1f0e63225.png" alt="Twitter X">
+      Twitter
+    </a>
+
+    <a class="link-btn" href="https://objkt.com/users/tz1YndWpU7m4tN7nTo2L3RZDztmfdqZnTeUg" target="_blank">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEUAAAD///9iYmI9PT3FxcXAwMDW1tYYGBjPz8+wsLBERER6enrd3d2KioplZWXr6+ukpKT4+PgvLy9wcHCPj49aWlq0tLR8fHxJSUlAQEDm5uZqamo1NTWVlZXDw8P09PQfHx8NDQ2dnZ1QUFApKSkaGhokJCQazdkfAAAFUklEQVR4nO2a2ZrqKhBGjRp34tDOYw8O3fb7P+JRQzFVERPFvY9+/7osCWGFAAWx0QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgaZkseyeW3xWLr/Isy73Cx6KKZvS2xeEtubCoVjqXSq+LYPaA1sWgWTQvr1R4lihGdrRVxNoPad/91DJMNHb0hQy/jeHUCr+Q4dwY9qzwCxnujWHLCtcxfB+ceLuppbdSaxy2SbBjR+sYbv5+b9cy3I+V4c6O1jG8lExrt/Ieahk2GotLC/dOrIZh9/9veEqCJn6khuHyGQw5NQzzlzfcvLrhNHmMYfOQZlnWzpd/pB9tw7dRu9/P0hkbaqVUNWwdkkcYzr/MMp30B+x3y/BgCm56TqGN+WXYfmct54YjKt6ybyLS86urx0/Hq2879Upow4+hU3DzYRXqOz91vCq44ScVVS/DPAlzn+FSqNF7RchwzQpafeUa+orMUN+WcruHGY7EKvuS4WLMC5pNu2eYuC+Cb/hOxVYUeZThLFCn0wVlQ+Q3ZOhu5z1DrTPXJR5kaFU77mSZNczsHbpjOO58tS0b/SiyYcGWypUYdulq69xmdbr/GTUrDDND547jHWpOkhZvy1GPf3vvYxnSzUzfs7vTUwsbTuhaf0o786EadLuUDbVzvDaxzO8c2/DTBKkf3SF7Rq0bTuptG+5oPIsvXzeqobrV2FnmaYNnOlEbOkslLYA/fq3qPTvaMdtwK9WmiWpIE1rXDasWmONAMnQnjx3v1wJl6Dw2y5CezExuVFTDVK5MZYZbHSBD70ksJO/GNUN6uw+BRkU1VFMnO8tWL6/OPJXh0CumjtXGXrjckIb5yL+KiGm4D7SQ+lZPBLTi++VUY/deuMQwVf1esk+JaaiSMD+F1FOsHmDNwMBRL9yHFy4xJEo+EMQ0fAvV9e4956bXp0Qmv+UVDL0RbRPTcBp6nv6XGGXItkRq0zX3wiWGNM2MpW1owb80ZBlIu7ZhStOyP2sZYhqq9Irvu5W6nu5Us9gK3ZFfudK5lNIongopYhpOQvc6eEbKkK1garXxk5ry9VB9XgweaERdD9W9WFzNIPrTgTJkS3vg+is5DWWFgQUjquHGM/Farte5pqzSCwypK4Y6q5HTtqiGudw3atu/0QEy9AZiP9CWa4Y69ZY2T7RKxzH8Fu+kNmjWsCNDN/tRXciXyauGlLPzfPHET/ETz0Nugvb09nz/S7s3k4zp3ZM9Ka0oyGq9amj2+NKha6jam9DnQSMespZJswMe6pVhIJRTXDekFVfIiXX
