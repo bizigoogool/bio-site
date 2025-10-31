@@ -19,14 +19,32 @@
     }
     .background-image {
       position: fixed;
-      width: 35%;
-      height: 35%;
-      background-size: contain;
+      width: 30vw;
+      height: 30vh;
+      background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: 0.12;
+      opacity: 0.15;
       z-index: 0;
       pointer-events: none;
+    }
+    .top-left {
+      top: 20px;
+      left: 20px;
+    }
+    .bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
+    .center-left {
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+    .center-right {
+      top: 50%;
+      right: 5%;
+      transform: translateY(-50%);
     }
     .container {
       position: relative;
@@ -81,10 +99,10 @@
   </style>
 </head>
 <body>
-  <div class="background-image" style="background-image: url('https://i.imgur.com/e1DToQb.jpeg'); top: 0; left: 0;"></div>
-  <div class="background-image" style="background-image: url('https://i.imgur.com/L7PtdcU.jpeg'); bottom: 0; right: 0;"></div>
-  <div class="background-image" style="background-image: url('https://i.imgur.com/A9ebdTr.jpeg'); top: 25%; left: 5%;"></div>
-  <div class="background-image" style="background-image: url('https://i.imgur.com/fEGa7uH.jpeg'); bottom: 15%; right: 10%;"></div>
+  <div class="background-image top-left" style="background-image: url('https://i.imgur.com/e1DToQb.jpeg');"></div>
+  <div class="background-image bottom-right" style="background-image: url('https://i.imgur.com/L7PtdcU.jpeg');"></div>
+  <div class="background-image center-left" style="background-image: url('https://i.imgur.com/A9ebdTr.jpeg');"></div>
+  <div class="background-image center-right" style="background-image: url('https://i.imgur.com/fEGa7uH.jpeg');"></div>
 
   <div class="container">
     <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
