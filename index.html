@@ -5,46 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bizigoogool</title>
   <link rel="icon" href="https://i.imgur.com/R0QUli8.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Vazirmatn&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Orbitron', 'Vazirmatn', sans-serif;
+      background-color: #0d0d0d;
+      color: #ff0000;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .background-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
       height: 100vh;
-      gap: 40px;
+      background-image: url('http://storage.photojoiner.com/api/attachments/file/2025-09-31/upload_d28bf9e61dee2161fddf79875964e636.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+      z-index: 0;
+      pointer-events: none;
     }
-    .icon-btn {
-      width: 64px;
-      height: 64px;
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 50px 20px;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #333;
+      margin: 20px auto;
+      box-shadow: 0 0 15px #ff0000;
+      object-fit: cover;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #ff0000; }
+      50% { box-shadow: 0 0 25px #ff0000; }
+      100% { box-shadow: 0 0 10px #ff0000; }
+    }
+    .name {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .bio {
+      font-size: 18px;
+      margin: 10px 0 30px;
+      color: #ccc;
+    }
+    .link-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
       background-color: #ff0000;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #ff0000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: transform 0.3s, box-shadow 0.3s;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
     }
-    .icon-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #ff0000;
-    }
-    .icon-btn img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
+    .link-btn:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <a class="icon-btn" href="https://x.com/bizigoogool" target="_blank">
-    <img src="https://copilot.microsoft.com/th/id/BCO.c22effa9-f53d-4e70-99e4-1fc1f0e63225.png" alt="Twitter X">
-  </a>
-
-  <a class="icon-btn" href="https://objkt.com/users/tz1YndWpU7m4tN7nTo2L3RZDztmfdqZnTeUg" target="_blank">
-    <img src="https://i.imgur.com/0zYzU8H.png" alt="Objkt">
-  </a>
+  <div class="background-layer"></div>
+  <div class="container">
+    <img class="profile-img" src="https://i.imgur.com/R0QUli8.webp" alt="Profile Photo">
+    <div class="name">Bizigoogool</div>
+    <div class="bio">Welcome to my personal page!</div>
+    <a class="link-btn" href="https://x.com/bizigoogool" target="_blank">Twitter</a>
+    <a class="link-btn" href="https://objkt.com/users/tz1YndWpU7m4tN7nTo2L3RZDztmfdqZnTeUg" target="_blank">Objkt</a>
+  </div>
 </body>
 </html>
